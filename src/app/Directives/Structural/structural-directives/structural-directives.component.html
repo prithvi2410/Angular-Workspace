@@ -1,0 +1,16 @@
+<button (click)="AddToTestArray()">Add Inputs using property binding</button>
+
+<div [hidden]="isArrayEmpty()">
+    <p>List of Inputs :</p>
+    <ul *ngFor = "let data of TestArray">
+        <li>{{data}}</li>
+    </ul>
+</div>
+
+<p [hidden]="!isArrayEmpty()">Array is empty! click add</p>
+
+
+<p>If Else Component</p>
+
+<button (click)="AddToTestArray()">Add Inputs using If Else</button>
+<app-if-else [inputArray]="TestArray"></app-if-else>

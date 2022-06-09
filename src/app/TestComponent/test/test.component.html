@@ -1,0 +1,13 @@
+<p>Test Component!</p>
+
+<p>{{title}}</p>
+<p>{{TestFunction("TEST")}}</p>
+<input type="text" [(ngModel)]="componentValue1"><br>
+<input type="text" [(ngModel)]="componentValue2">
+<app-second-component [inputValue] = "componentValue1" [inputValue2]="componentValue2"></app-second-component>
+
+
+<br><button routerLink='../second-component'>Click for second component</button>
+<br><button [routerLink]="['../life-cycle-component']">Click for Life Cycle component</button>
+<br><button [routerLink]="['../for-loop-component']">Click for For Loop component</button>
+<br><button [routerLink]="['../structural-directives-component']">Click for Directive component</button>
