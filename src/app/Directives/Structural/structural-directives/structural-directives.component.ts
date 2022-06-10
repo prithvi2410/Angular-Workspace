@@ -7,21 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructuralDirectivesComponent implements OnInit {
 
-  TestArray:string[]=[];
-  count=0;
+  PropertyBindingArray: string[] = [];
+  IfElseArray: string[] = [];
+  count = 0;
+  SwitchCaseValue:string='';
+  Countries:string[]=['India','Sri Lanka','South Korea','China'];
+  States:string[]=['Tamil Nadu','Mumbai','Bangalore','Pune'];
+  Games:string[]=['Cricket','Football','UFC'];
   constructor() { }
 
   ngOnInit(): void {
   }
-  AddToTestArray():void{
-    this.TestArray.push('Test input '+ this.count);
+  ngOnChanges(){
+    console.log(this.SwitchCaseValue);
+  }
+  AddToTestArray(array:string[]): void {
+    array.push('Test input ' + this.count);
     this.count++;
   }
-  isArrayEmpty():boolean {
-    if(this.TestArray.length>0)
+  isArrayEmpty(): boolean {
+    if (this.PropertyBindingArray.length > 0)
       return false;
-      
+
     return true;
   }
-
+  ClearArrayInputs() {
+    this.PropertyBindingArray = [];
+    this.IfElseArray = [];
+  }
 }

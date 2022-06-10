@@ -1,8 +1,9 @@
-<button (click)="AddToTestArray()">Add Inputs using property binding</button>
+<p><strong>Property Binding</strong></p>
+<button (click)="AddToTestArray(PropertyBindingArray)">Add Inputs using property binding</button>
 
 <div [hidden]="isArrayEmpty()">
     <p>List of Inputs :</p>
-    <ul *ngFor = "let data of TestArray">
+    <ul *ngFor = "let data of PropertyBindingArray">
         <li>{{data}}</li>
     </ul>
 </div>
@@ -10,7 +11,47 @@
 <p [hidden]="!isArrayEmpty()">Array is empty! click add</p>
 
 
-<p>If Else Component</p>
+<br><br>
+<hr>
+<p><strong>If - Else</strong></p>
+<button (click)="AddToTestArray(IfElseArray)">Add Inputs using If Else</button>
+<br><br>
+<div *ngIf = "IfElseArray.length>0; else ArrayEmpty">
+    <p>List of Inputs :</p>
+    <ul *ngFor = "let data of IfElseArray">
+        <li>{{data}}</li>
+    </ul>
+</div>
+<ng-template #ArrayEmpty>Array is empty! click add</ng-template>
 
-<button (click)="AddToTestArray()">Add Inputs using If Else</button>
-<app-if-else [inputArray]="TestArray"></app-if-else>
+
+
+<br><br>
+<br><button (click)="ClearArrayInputs()">Clear Inputs</button>
+<br><br>
+<hr>
+<p><strong>Switch Case</strong></p>
+
+<button (click)="SwitchCaseValue='Countries'">View Country Names</button>
+<button (click)="SwitchCaseValue='States'">View Country Names</button>
+<button  (click)="SwitchCaseValue='Games'">View Country Names</button>
+
+<div [ngSwitch] = "SwitchCaseValue">
+    <div *ngSwitchCase="'Countries'">
+        <ul *ngFor="let item of Countries">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div *ngSwitchCase="'States'">
+        <ul *ngFor="let item of States">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+    <div *ngSwitchCase="'Games'">
+        <ul *ngFor="let item of Games">
+            <li>{{item}}</li>
+        </ul>
+    </div>
+</div>
+<br><br>
+<button [routerLink]="['']">Go Back</button>

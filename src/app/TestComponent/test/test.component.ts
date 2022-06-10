@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   title:string = "Test title";
-  componentValue1:string = "Asia Tommy";
-  componentValue2:string = "Europe Gaya";
+  componentValue1:string = "";
+  componentValue2:string = "";
   constructor() { 
   //console.log("Test Constructor");
   }

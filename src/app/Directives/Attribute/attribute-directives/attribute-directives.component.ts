@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributeDirectivesComponent implements OnInit {
 
+  isButtonClicked:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeButtonStatus():void{
+    this.isButtonClicked=!this.isButtonClicked;
   }
 
 }

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LifeCycleComponent implements OnInit {
 
   constructor() { }
-  
+
   ngOnInit(): void {
     console.log("ngOnInit")
   }

@@ -1,13 +1,20 @@
 <p>Test Component!</p>
 
-<p>{{title}}</p>
-<p>{{TestFunction("TEST")}}</p>
-<input type="text" [(ngModel)]="componentValue1"><br>
+<p><strong>String Interpolation </strong>: {{title}}</p>
+<p><strong>String Interpolation with invoking a method : </strong>  {{TestFunction("TEST")}}</p>
+<hr>
+
+<p><strong>Two Way Binding</strong></p>
+<input type="text" [(ngModel)]="componentValue1">
+<br><br>
 <input type="text" [(ngModel)]="componentValue2">
+<br><br>
+<hr>
+<p><strong>Component to Component Data Transfer</strong></p>
 <app-second-component [inputValue] = "componentValue1" [inputValue2]="componentValue2"></app-second-component>
-
-
+<hr>
+<p><strong>Roting using Path and Route Link</strong></p>
 <br><button routerLink='../second-component'>Click for second component</button>
 <br><button [routerLink]="['../life-cycle-component']">Click for Life Cycle component</button>
-<br><button [routerLink]="['../for-loop-component']">Click for For Loop component</button>
-<br><button [routerLink]="['../structural-directives-component']">Click for Directive component</button>
+<br><button [routerLink]="['../structural-directives-component']">Click for Structural Directive component</button>
+<br><button [routerLink]="['../attribute-directives-component']">Click for Attribute Directive component</button>
