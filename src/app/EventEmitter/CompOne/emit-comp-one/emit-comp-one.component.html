@@ -1,0 +1,11 @@
+<p>Emit Component One </p>
+<p>When Component two button is clicked, Component One Method is called and emitted
+    <br>It's a kind on giving custom functionality while clicked
+    <br>It improves the reusability of component
+</p>
+<label for="numberBox" >Enter a number to be added with 10</label><br>
+<input type="number" name="numberBox" [(ngModel)]="num">
+<p>The reuslt added and emitted from child component is : {{result}}</p>
+<hr>
+<br>
+<app-emit-comp-two (outputVariable) = "ToggleEmitting()" [inputNumber]="num" (outputNumber)="addResult($event)"></app-emit-comp-two>

@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { StructuralDirectivesComponent } from './Directives/Structural/structural-directives/structural-directives.component';
 import { AttributeDirectivesComponent } from './Directives/Attribute/attribute-directives/attribute-directives.component';
 import { ChangeColorDirective } from './Directives/Attribute/ColorChangeDirective/change-color.directive';
+import { EmitCompOneComponent } from './EventEmitter/CompOne/emit-comp-one/emit-comp-one.component';
+import { EmitCompTwoComponent } from './EventEmitter/CompTwo/emit-comp-two/emit-comp-two.component';
+import { CrudUsingHttpComponent } from './HttpClient/crud-using-http/crud-using-http.component';
+import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { ChangeColorDirective } from './Directives/Attribute/ColorChangeDirectiv
     LifeCycleComponent,
     StructuralDirectivesComponent,
     AttributeDirectivesComponent,
-    ChangeColorDirective
-  ],
+    ChangeColorDirective,
+    EmitCompOneComponent,
+    EmitCompTwoComponent,
+    CrudUsingHttpComponent,    
+  ], 
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
