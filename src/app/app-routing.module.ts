@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AttributeDirectivesComponent } from './Directives/Attribute/attribute-directives/attribute-directives.component';
 import { EmitCompOneComponent } from './EventEmitter/CompOne/emit-comp-one/emit-comp-one.component';
 import { CrudUsingHttpComponent } from './HttpClient/crud-using-http/crud-using-http.component';
+import { CrudEditComponent } from './HttpClient/crud-using-http/edit-component/crud-edit/crud-edit.component';
 
 const routes: Routes = [
   {path : '',component : TestComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path : 'structural-directives-component',component : StructuralDirectivesComponent},
   {path : 'attribute-directives-component',component : AttributeDirectivesComponent},
   {path : 'output-emit-component',component : EmitCompOneComponent},
-  {path : 'crud-using-http-component',component : CrudUsingHttpComponent}
+  {path : 'crud-using-http-component',component : CrudUsingHttpComponent},
+  {path : 'edit-employee',component : CrudEditComponent }
   
 ];
 

@@ -1,6 +1,17 @@
 <p>This is a simple CRUD using Http with json-server</p>
+
+<label>Employee id : </label>
+<br>
+<input type="text" [(ngModel)]="EmployeeId">
+<br><br>
+<label>Employee Name : </label>  
+<br>
+<input type="text" [(ngModel)]="EmployeeName">
+<br><br> 
+<button (click)="addEmployee()">Add </button>
+<br><br> 
 <button (click)="getAllEmployees()">Get All Employees</button>
-<table [border]="'solid '">
+<table [border]="'solid '" [hidden]="tableStatus">
 <tr>
     <th>Employee Id</th>
     <th>Employee Name</th>
@@ -8,9 +19,10 @@
 <tr *ngFor="let employee of employees">
     <td>{{employee.id}}</td>
     <td>{{employee.name}}</td>
-    <td><button>edit</button></td>
+    <td><button (click)="editBtn(employee.id,employee.name)">edit</button></td>
     <td><button (click)="deleteEmployee(employee.id)">delete</button></td>
 </tr>
 </table>
+<app-crud-edit [hidden]="editStatus" [EmployeeId]="editId" [EmployeeName]="editName" (canceled)="editCancelled($event)"></app-crud-edit>
 <br><br>
 <button [routerLink]="['']">Go Back</button>

@@ -14,6 +14,7 @@ import { EmitCompOneComponent } from './EventEmitter/CompOne/emit-comp-one/emit-
 import { EmitCompTwoComponent } from './EventEmitter/CompTwo/emit-comp-two/emit-comp-two.component';
 import { CrudUsingHttpComponent } from './HttpClient/crud-using-http/crud-using-http.component';
 import { HttpClientModule  } from '@angular/common/http';
+import { CrudEditComponent } from './HttpClient/crud-using-http/edit-component/crud-edit/crud-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule  } from '@angular/common/http';
     ChangeColorDirective,
     EmitCompOneComponent,
     EmitCompTwoComponent,
-    CrudUsingHttpComponent,    
+    CrudUsingHttpComponent,
+    CrudEditComponent,    
   ], 
   imports: [
     FormsModule,
