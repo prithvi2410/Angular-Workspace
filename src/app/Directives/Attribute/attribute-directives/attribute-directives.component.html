@@ -1,5 +1,5 @@
 <button (click)="changeButtonStatus()">Click to change color</button>
-<p ChangeColor [buttonStatus]= "isButtonClicked">Click the button to change the color using attribute directive</p>
+<p ChangeColor [buttonStatus]= "isButtonClicked" [buttonStatus1]="isButtonClicked">Click the button to change the color using attribute directive</p>
 
 <br><br>
 <button [routerLink]="['']">Go Back</button>

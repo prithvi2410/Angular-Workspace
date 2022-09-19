@@ -1,3 +1,43 @@
-<p>For ngOnChanges Refer Test Component Inspect</p>
-<p>Use Inspect for Life Cycle Events(LifeCycle hook)</p>
-<button [routerLink]="['']">Go Back</button>
+<div style="margin: 5vw;">
+  <ul>
+    <h6>Life Cycle Hooks</h6>
+    <li>ngOnChanges</li>
+    <li>ngOnInit</li>
+    <li>ngDoCheck</li>
+    <li>ngAfterContentInit</li>
+    <li>ngAfterContentChecked</li>
+    <li>ngAfterViewInit</li>
+    <li>ngAfterViewChecked</li>
+    <li>ngOnDestroy</li>
+  </ul>
+
+  <p>Change the input and check for ngOnChanges</p>
+  <p>
+    ngOnChanges is called for primitive data types but when we pass complex
+    objects as input
+    <br />
+    ngOnChanges is called only if the refrence is changed.
+    <br />
+    Here if you change String input ngOnChanges is called but if you change Object.Name input is changed ngOnChanges is not
+    called.
+    <br />
+    it is because the refrence is not change only its property is changed.
+    <br />
+  </p>
+  <p>Use Inspect for Life Cycle Events(LifeCycle hook)</p>
+
+  <label> String </label>
+  <input type="text" [(ngModel)]="text" />
+
+  <label> Object.Name </label>
+  <input type="text" [(ngModel)]="hero.Name" />
+
+  <app-child-comp [InputText]="text" [InputObject]="hero"> <p>Projected Content through ng-content</p></app-child-comp>
+  <br />
+  <br />
+  <p><i>Note : Constructor is neither a life cycle hook nor it is specific to Angular. <br>
+    It is a Javascript feature. Angular makes use of a constructor to inject dependencies. <br>
+    At this point, none of the components input properties are available to use. Neither <br>
+    its child components are constructed. Projected contents are also not available.</i></p>
+  <button [routerLink]="['']">Go Back</button>
+</div>

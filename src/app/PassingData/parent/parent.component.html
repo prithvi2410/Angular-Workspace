@@ -1,0 +1,23 @@
+<p>Passing data between two components</p>
+<h3>Parent to Child</h3>
+<h6>Parent Component</h6>
+<input type="text" [(ngModel)]="Input" placeholder="start typing..">
+
+
+<hr>
+<app-child #Child [Input]="Input" (Output)="getOutput($event)"><p><i>This is a projected content at child from parent</i></p></app-child>
+<hr>
+
+
+<h3>Child to Parent</h3>
+<ul>
+  <li>
+      <input type="button" (click)="viewChild()" value="Using ViewChild">
+      <p>{{fromViewChild}}</p>
+  </li>
+  <li>
+      <input type="button" (click)="viewOutput()" value="Using @Output">
+      <p>{{fromOutput}}</p>
+  </li>
+</ul>
+<button [routerLink]="['']">Go Back</button>

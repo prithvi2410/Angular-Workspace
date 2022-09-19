@@ -4,11 +4,12 @@ import { Directive, ElementRef, Input } from '@angular/core';
   selector: '[ChangeColor]'
 })
 export class ChangeColorDirective {
-  
+
   @Input() buttonStatus:boolean=true;
-  constructor(private attributeElement:ElementRef) 
+  @Input() buttonStatus1:boolean=true;
+  constructor(private attributeElement:ElementRef)
   {
-    
+
   }
   ngOnChanges():void{
     if(this.buttonStatus)
@@ -16,6 +17,11 @@ export class ChangeColorDirective {
 
     else
     this.attributeElement.nativeElement.style.color='black';
+
+    if(this.buttonStatus1)
+    this.attributeElement.nativeElement.style.fontStyle = "italic";
+    else
+    this.attributeElement.nativeElement.style.fontStyle = "";
   }
 
 }

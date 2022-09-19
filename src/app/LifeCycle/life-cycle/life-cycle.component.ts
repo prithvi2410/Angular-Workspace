@@ -1,3 +1,4 @@
+import { Hero } from './../Hero';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class LifeCycleComponent implements OnInit {
 
   constructor() { }
+  text:string='';
+  hero:Hero={Name : ""};
 
   ngOnInit(): void {
-    console.log("ngOnInit")
   }
-  ngOnDestroy() : void{
-    console.log("ngOnDestroy")
-  }
-
 }

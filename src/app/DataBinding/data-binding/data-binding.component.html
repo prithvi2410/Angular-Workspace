@@ -1,0 +1,65 @@
+<p>Data binding is a technique, where the data stays in sync between the component and the view.</p>
+<h4>One Way Binding</h4>
+<h6>From Component to View</h6>
+  <div style="margin: 2vw;">
+  <h6>Interpolation</h6>
+  <pre>
+    {{codeExample1}}
+  </pre>
+  <p>example -> variable : {{name}}</p>
+  <hr>
+  <pre>
+    {{codeExample2}}
+  </pre>
+  <p>example -> method : {{getName()}}</p>
+  <hr>
+  <pre>
+    {{codeExample3}}
+  </pre>
+  <p style.color="{{color}}">This is a sample to bind data for property through interpolation</p>
+  <hr>
+  <p>You can also interpolate string to any attribute of html tag like : href ,src and etc</p>
+  <hr>
+  <p>Use ngNonBindable to tell Angular not to compile or bind </p>
+  <pre>
+    {{codeExample4}}
+  </pre>
+
+  <pre ngNonBindable>
+    Ouptut :
+    not evaluate: {{variable}}
+  </pre>
+  <h6><i>Note : You can use '?' operator and '!'(non-null assertion) operator to avoid null issues with string interpolation</i></h6>
+  <hr>
+  <h6>Property Binding</h6>
+  <p>[binding-target]=”binding-source”</p>
+  <pre>
+    {{codeExample5}}
+  </pre>
+  <button [disabled]="true">Button disabled</button>
+  <pre>
+    {{codeExample6}}
+  </pre>
+  <button [disabled]="isDisabled">Button enabled</button>
+  <h6><i>Note : The property binding binds to the properties of DOM elements, components, and directives and not to HTML attributes.</i></h6>
+  <hr>
+  <h6>Attribute Binding</h6>
+  <p>ngClass</p>
+  <pre>
+    {{codeExample7}}
+  </pre>
+  <button ngClass="red">Button</button>
+  <hr>
+  <h6>Event Binding</h6>
+  <p>(target-event)="TemplateStatement"</p>
+  <pre>
+    {{codeExample8}}
+  </pre>
+  <button (click)="alert();">Click to alert</button>
+  <p>Multiple Event Binding for same event </p>
+  <pre>
+    {{codeExample9}}
+  </pre>
+  <button (click)="alert();count=count+1">Click to alert</button>
+  <p>Button clicked {{count}} times</p>
+</div>

@@ -2,31 +2,11 @@
   "students": [
     {
       "id": "ACE0001",
-      "name": "Prithvi Raj SP"
+      "name": "Gokul"
     },
     {
       "id": "ACE0002",
-      "name": "Devarajan S"
-    },
-    {
-      "id": "ACE0004",
-      "name": "Rannith"
-    },
-    {
-      "id": "ACE0005",
-      "name": "Saju"
-    },
-    {
-      "id": "ACE0006",
-      "name": "Vinoth"
-    },
-    {
-      "id": "ACE0007",
-      "name": "Chittu"
-    },
-    {
-      "id": "ACE0008",
-      "name": "a"
+      "name": "Gokul"
     }
   ]
 }
