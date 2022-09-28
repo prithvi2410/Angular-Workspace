@@ -1,0 +1,148 @@
+<h3>Pipes</h3>
+<h4>Date Pipe</h4>
+  <pre>
+    <code>
+      {{codeSample00}}
+    </code>
+  </pre>
+  <p> Unformatted date : {{toDateVariable }} </p>
+  <pre>
+    <code>
+      {{codeSample0}}
+    </code>
+  </pre>
+  <p> Formatted date : {{toDateVariable | date}} </p>
+  <hr>
+<h4>Passing arguments to pipes</h4>
+  <pre>
+    <code>
+      {{codeSample1}}
+    </code>
+  </pre>
+ <p> Passing arguments date : 'medium' : {{toDateVariable | date:'medium'}} </p>
+  <pre>
+    <code>
+      {{codeSample2}}
+    </code>
+  </pre>
+  <p> Passing arguments date : 'short' : {{toDateVariable | date:'short'}} </p>
+  <pre>
+    <code>
+      {{codeSample3}}
+    </code>
+  </pre>
+  <p> Passing arguments date : 'fullDate' : {{toDateVariable | date:'fullDate'}} </p>
+  <pre>
+    <code>
+      {{codeSample4}}
+    </code>
+  </pre>
+  <p> Passing arguments date : 'longDate' : {{toDateVariable | date:'longDate'}} </p>
+  <hr>
+<h4>Chaining Pipes</h4>
+  <pre>
+    <code>
+      {{codeSample5}}
+    </code>
+  </pre>
+  <p>Chaining Pipes : {{toDateVariable | date:'medium' | uppercase}} </p>
+  <hr>
+<h4>String Pipes </h4>
+  <pre>
+    <code>
+      {{codeSample6}}
+    </code>
+  </pre>
+  <p>lowercase pipe : {{stringVariable| lowercase}}</p>
+  <pre>
+    <code>
+      {{codeSample7}}
+    </code>
+  </pre>
+  <p>uppercase pipe : {{stringVariable| uppercase}}</p>
+  <pre>
+    <code>
+      {{codeSample8}}
+    </code>
+  </pre>
+  <p>titlecase pipe : {{stringVariable| titlecase}}</p>
+  <pre>
+    <code>
+      {{codeSample9}}
+    </code>
+  </pre>
+  <p>slice pipe : {{stringVariable| slice:4}}</p>
+  <pre>
+    <code>
+      {{codeSample10}}
+    </code>
+  </pre>
+  <p>range slice pipe : {{stringVariable| slice:4:16}}</p>
+  <pre>
+    <code>
+      {{codeSample11}}
+    </code>
+  </pre>
+  <p>json pipe : {{stringVariable| json}}</p>
+  <hr>
+<h4>Number Pipes </h4>
+  <pre>
+    <code>
+      {{codeSample12}}
+    </code>
+  </pre>
+  <p>without decimal pipe : {{numberVariable  }}</p>
+  <pre>
+    <code>
+      {{codeSample13}}
+    </code>
+  </pre>
+  <p>with decimal pipe : {{numberVariable|number}}</p>
+  <pre>
+    <code>
+      {{codeSample14}}
+    </code>
+  </pre>
+  <p>with decimal pricision in pipe : {{numberVariable|number:'.4'}}</p>
+  <pre>
+    <code>
+      {{codeSample15}}
+    </code>
+  </pre>
+  <p>with decimal range pricision in pipe : {{numberVariable|number:'.2-5'}}</p>
+  <pre>
+    <code>
+      {{codeSample16}}
+    </code>
+  </pre>
+  <p>with integer pricision in pipe : {{numberVariable|number:'6.'}}</p>
+  <hr>
+<h4>Percent Pipes </h4>
+  <pre>
+    <code>
+      {{codeSample17}}
+    </code>
+  </pre>
+  <p>percent pipe : {{percentVariable|percent}}</p>
+  <hr>
+<h4>Currency Pipes </h4>
+  <pre>
+    <code>
+      {{codeSample18}}
+    </code>
+  </pre>
+  <p>Currency pipe : {{currencyVariable|currency}} </p>
+  <pre>
+    <code>
+      {{codeSample19}}
+    </code>
+  </pre>
+  <p>Currency pipe with currency type argument : {{currencyVariable|currency:'INR'}} </p>
+  <pre>
+    <code>
+      {{codeSample20}}
+    </code>
+  </pre>
+  <p>Currency pipe with currency type and code argument : {{currencyVariable|currency:'GBP' : 'code '}} </p>
+<br><br>
+<button [routerLink]="['']">Go Back</button>

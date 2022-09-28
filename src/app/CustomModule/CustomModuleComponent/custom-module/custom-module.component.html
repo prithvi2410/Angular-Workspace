@@ -1,1 +1,38 @@
-<p>custom-module works!</p>
+<h3>Custom component from a custom module</h3>
+<hr>
+<h5>Creating a custom module</h5>
+<p>We use @NgModule class decorator to define a Angular Module and provide metadata about the Modules.</p>
+<p>Properties of <strong>@NgModule</strong></p>
+<ul>
+  <li>Imports</li>
+  <li>Declarations</li>
+  <li>Providers</li>
+  <li>Bootstrap</li>
+</ul>
+<pre>
+  Code Example
+  <code>{{codeExample1}}</code>
+</pre>
+<h5>Imports</h5>
+<p>We need to list all the external modules required including other Angular modules, that is used by this Angular Module</p>
+<h5>Declarations</h5>
+<p>The Declarations array contains the list of components, directives, & pipes that belong to this Angular Module.</p>
+<h5>Providers</h5>
+<p>The Providers array, is where we register the services we create. The Angular Dependency injection framework injects these services in components, directives. pipes and other services. </p>
+<h5>Bootstrap</h5>
+<p>The component that angular should load, when this Angular Module loads. The component must be part of this module.
+<hr>
+<h4>Application Bootstraping</h4>
+<p>Bootstrapping is a technique of initializing or loading our Angular application</p>
+<p>The entry point of our application is main.ts. You will find it under the src folder.</p>
+<h4>Main.ts</h4>
+<pre><code>{{codeExample2}}</code></pre>
+<p>Here we can see the app module is loaded when the application is Bootstraped. We can also load our custom modules instead of this AppModule</p>
+<strong><i>Note : If we need to load custom module then we need atleast one component bootstraped in that custom module and that component's selector must be used in index.html</i></strong>
+<pre><code>{{codeExample3}}</code></pre>
+<hr>
+<h5>Routing Module</h5>
+<p>This module does not contain any components, pipes or directives. Hence it does not need to declare anything in the declaration array.
+  <br>
+  No services are part of this Module, Hence providers array is also not needed.</p>
+

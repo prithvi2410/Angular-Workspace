@@ -1,0 +1,38 @@
+<h3>Routing</h3>
+
+  <p>This is the value from query string from routing {{id}}!</p>
+
+<hr>
+
+  <h5>Auth Gaurd</h5>
+  <input type="checkbox" [(ngModel)]="role" (click)="setRole()"><label>Click to activate and deactivate auth gaurd's CanActive Method</label>
+<hr>
+
+  <h5>CanActivate</h5>
+  <p>code example</p>
+  <pre>
+    {{codeExample1}}
+  </pre>
+  <p>Here AuthGaurdService has canActivate which returns a boolean which decides to load a route.</p>
+  <strong><i>Note : When checkbox is checked the value becomes true, in real world application this true or false can be decided by user's role, login status or any required parameter </i></strong>
+  <br><br>
+  <input type="button" [routerLink]="['/authGaurd-component']" value="Click to check auth gaurd">
+
+<hr>
+
+  <h5>CanActivateChild</h5>
+  <p>Before that lets know about 'child-route'</p>
+  <pre>
+    {{codeExample2}}
+    {{codeExample3}}
+  </pre>
+  <p>Here Child route is added with parent route : https://domain/parentRoute/childRoute.</p>
+  <p>The CanActivatechild guard is very similar to CanActivateGuard. We can apply this guard to the child route.</p>
+  <input [routerLink]="['child-route']" type="button" value="click for child route">
+  <router-outlet></router-outlet>
+
+<hr>
+
+
+<br>
+<br><button [routerLink]="['']">Go Back</button>

@@ -1,3 +1,4 @@
+import { PersonService } from './Service/service/Person.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -20,6 +21,14 @@ import { CrudEditComponent } from './HttpClient/crud-using-http/edit-component/c
 import { FormBuilderComponent } from './FormBuilder/form-builder/form-builder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataBindingComponent } from './DataBinding/data-binding/data-binding.component';
+import { PipesComponent } from './Pipes/pipes/pipes.component';
+import { ServiceComponent } from './Service/service/service.component';
+import { RoutingComponent } from './Routing/routing/routing.component';
+import { RoutingChildComponent } from './Routing/Child/routing-child/routing-child.component';
+import { AuthGaurdComponent } from './Routing/AuthGaurdComponent/auth-gaurd/auth-gaurd.component';
+import { AuthGaurdService } from './Routing/routing/AuthGaurd.service';
+
+
 
 
 
@@ -40,6 +49,11 @@ import { DataBindingComponent } from './DataBinding/data-binding/data-binding.co
     ParentComponent,
     ChildComponent,
     DataBindingComponent,
+    PipesComponent,
+    ServiceComponent,
+    RoutingComponent,
+    RoutingChildComponent,
+    AuthGaurdComponent,
   ],
   imports: [
     FormsModule,
@@ -49,7 +63,8 @@ import { DataBindingComponent } from './DataBinding/data-binding/data-binding.co
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  //providers: [PersonService],
+  providers: [{provide:PersonService,useClass:PersonService},AuthGaurdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

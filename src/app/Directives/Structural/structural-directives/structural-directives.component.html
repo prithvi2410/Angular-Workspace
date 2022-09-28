@@ -32,9 +32,9 @@
 <hr>
 <p><strong>Switch Case</strong></p>
 
-<button (click)="SwitchCaseValue='Countries'">View Country Names</button>
-<button (click)="SwitchCaseValue='States'">View Country Names</button>
-<button  (click)="SwitchCaseValue='Games'">View Country Names</button>
+<button (click)="SwitchCaseValue='Countries'">View Countries Name</button>
+<button (click)="SwitchCaseValue='States'">View States Name</button>
+<button  (click)="SwitchCaseValue='Games'">View Sports Name</button>
 
 <div [ngSwitch] = "SwitchCaseValue">
     <div *ngSwitchCase="'Countries'">

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { CustomModuleComponent } from './CustomModuleComponent/custom-module/custom-module.component';
 
@@ -7,8 +8,9 @@ import { CustomModuleComponent } from './CustomModuleComponent/custom-module/cus
     declarations:[
     CustomModuleComponent
   ],
-    imports:[AppRoutingModule],
-    providers:[]
+    imports:[BrowserModule,AppRoutingModule],
+    providers:[],
+    bootstrap: [CustomModuleComponent]
   }
 )
 export class CustomModule{}
